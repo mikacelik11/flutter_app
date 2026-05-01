@@ -87,20 +87,14 @@ class _MyHomePageState extends State<MyHomePage> {
         leading: Icon(Icons.notification_add, color: Colors.amber),
 
       ),
-      body: Container(
-        padding: EdgeInsets.all(50.0),
-        child: Stack(
-          children: [
-            Image.asset(
-              'assets/images/bg.jpg',
-              fit: BoxFit.cover,
-              height: 300,
-            
-            ),
-            SizedBox(height: 300, child: Center(child: Text("Flutter", style: TextStyle(color: Colors.white))))
-          ],
-        ),
-      ),
+      body: Wrap(children: [
+        Text('fefefefef'),
+        Text('fefefefef'),
+        Text('fefefefef'),
+        Text('fefefefef'),
+        Text('fefefefef'),
+
+      ],),
       floatingActionButton: FloatingActionButton(
         onPressed: _incrementCounter,
         tooltip: 'Increment',
