@@ -26,13 +26,19 @@ class MyApp extends StatelessWidget {
       home: Scaffold(
         appBar: AppBar(
           title: Text('Flutter Map'),
-          centerTitle: false,
-          leading: Icon(Icons.login),
-          actions: [
-            Text('feffefefef'),
-            Icon(Icons.login),
-          ],
-          backgroundColor: Colors.teal,
+          centerTitle: true,
+        ),
+        bottomNavigationBar: NavigationBar(
+          destinations: [
+            NavigationDestination(
+              icon: Icon(Icons.home), 
+              label: 'home',
+            ),
+            NavigationDestination(
+              icon: Icon(Icons.person), 
+              label: 'Profile',
+            ),
+          ]
         ),
       ),
     );
