@@ -4,6 +4,8 @@ void main() {
   runApp(const MyApp());
 }
 
+String title = 'Flutter Mapp';
+
 //stateless
 
 //material app
@@ -23,60 +25,38 @@ class MyApp extends StatelessWidget {
           brightness: Brightness.dark
           )
         ),
-      home: Scaffold(
-        appBar: AppBar(
-          title: Text('Flutter Map'),
-          centerTitle: true,
-        ),
-        drawer: Drawer(
-          child: Column(
-            children: [
-              DrawerHeader(
-                child: Text('Drawer'),
-              
+      home: SafeArea(
+        child: Scaffold(
+          appBar: AppBar(
+            title: Text(title),
+            centerTitle: true,
+          ),
+          drawer: Drawer(
+            child: Column(
+              children: [
+                ListTile(
+                  title: Text('logout'),
+                ),
+              ],
+            ),
+          ),
+          
+          bottomNavigationBar: NavigationBar(
+            destinations: [
+              NavigationDestination(
+                icon: Icon(Icons.home), 
+                label: 'home',
               ),
-            
-              ListTile(
-                title: Text('logout'),
+              NavigationDestination(
+                icon: Icon(Icons.person), 
+                label: 'Profile',
               ),
             ],
+            onDestinationSelected: (value) {
+              print(value);
+            },
+            selectedIndex: 0,
           ),
-        ),
-        floatingActionButton: Column(
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            FloatingActionButton(
-              onPressed: () {
-                print('ejenje');
-              },
-              child: Icon(Icons.add),
-            ),
-            SizedBox(
-              height: 10.0,
-            ),
-            FloatingActionButton(
-              onPressed: () {
-                print('ejenje');
-              },
-              child: Icon(Icons.add),
-            ),
-          ],
-        ),
-        bottomNavigationBar: NavigationBar(
-          destinations: [
-            NavigationDestination(
-              icon: Icon(Icons.home), 
-              label: 'home',
-            ),
-            NavigationDestination(
-              icon: Icon(Icons.person), 
-              label: 'Profile',
-            ),
-          ],
-          onDestinationSelected: (value) {
-            print(value);
-          },
-          selectedIndex: 1,
         ),
       ),
     );
