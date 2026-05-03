@@ -28,6 +28,12 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter Map'),
           centerTitle: true,
         ),
+        floatingActionButton: FloatingActionButton(
+          onPressed: () {
+            print('ejenje');
+          },
+          child: Icon(Icons.add),
+        ),
         bottomNavigationBar: NavigationBar(
           destinations: [
             NavigationDestination(
@@ -38,7 +44,11 @@ class MyApp extends StatelessWidget {
               icon: Icon(Icons.person), 
               label: 'Profile',
             ),
-          ]
+          ],
+          onDestinationSelected: (value) {
+            print(value);
+          },
+          selectedIndex: 1,
         ),
       ),
     );
