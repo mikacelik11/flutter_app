@@ -28,11 +28,39 @@ class MyApp extends StatelessWidget {
           title: Text('Flutter Map'),
           centerTitle: true,
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: () {
-            print('ejenje');
-          },
-          child: Icon(Icons.add),
+        drawer: Drawer(
+          child: Column(
+            children: [
+              DrawerHeader(
+                child: Text('Drawer'),
+              
+              ),
+            
+              ListTile(
+                title: Text('logout'),
+              ),
+            ],
+          ),
+        ),
+        floatingActionButton: Column(
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            FloatingActionButton(
+              onPressed: () {
+                print('ejenje');
+              },
+              child: Icon(Icons.add),
+            ),
+            SizedBox(
+              height: 10.0,
+            ),
+            FloatingActionButton(
+              onPressed: () {
+                print('ejenje');
+              },
+              child: Icon(Icons.add),
+            ),
+          ],
         ),
         bottomNavigationBar: NavigationBar(
           destinations: [
