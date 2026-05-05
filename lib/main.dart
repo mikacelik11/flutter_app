@@ -7,11 +7,8 @@ void main() {
 String title = 'Flutter Mapp';
 
 //stateless
-
 //material app
-
 //scaffold
-
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
