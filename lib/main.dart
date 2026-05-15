@@ -12,7 +12,7 @@ String title = 'Flutter Mapp';
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
 
-  @override
+  @override //build method
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
